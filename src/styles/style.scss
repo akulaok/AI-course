@@ -1,0 +1,69 @@
+@use "../components/header/header";
+@use "../components/hero/hero";
+@use "../components/benefits/benefits";
+@use "../pages/index";
+@use "../components/modal/modal";
+
+:root {
+  --color-black: #0C0D12;
+  --color-grey: #161524;
+  --color-grey-light: #1B1A2C;
+  --color-white: #ffffff;
+  --color-aquamarine: #81F3F8;
+  --color-pink-light: #F706A3;
+  --color-pink: #CA0078;
+  --color-purple: #5A73EF;
+  --color-overlay: #0C0D124D;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media (max-width: 1600px) {
+    font-size: 56.25%;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 43.75%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 62.5%;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Roboto';
+  font-weight: 400;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  overflow-x: hidden;
+}

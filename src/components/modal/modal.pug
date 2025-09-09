@@ -1,0 +1,16 @@
+div.modal__overlay
+div.modal
+  button.modal__close(type="button" aria-label="Закрыть")
+    img.modal__close-icon(src="images/icons/close.svg" alt="" aria-hidden="true")
+  .modal__content
+    .modal__description
+      h2.modal__title Овладей 
+        br.mobile
+        | нейросетями!
+      p.modal__text Получи в подарок доступ ко всем курсам
+    picture.modal__image
+      source(media="(max-width: 768px)" srcset="images/modal/gift-mobile.svg")
+      img.modal__img(src='images/modal/gift.svg' alt='Иллюстрация')
+    form.modal__form
+      input.modal__input(type="email" placeholder="Ваш email")
+      button.modal__btn(type="submit") Получить доступ

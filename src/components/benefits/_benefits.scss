@@ -1,0 +1,146 @@
+@use "../../styles/breakpoints";
+
+.benefits {
+  position: relative;
+  overflow: visible;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 8rem;
+    color: var(--color-white);
+    padding-bottom: 2.4rem;
+    font-weight: 500;
+  }
+
+  &__description {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: var(--color-text);
+    padding-bottom: 9.6rem;
+    text-align: center;
+
+    span {
+      color: var(--color-pink-light);
+    }
+
+    br.desktop {
+      display: inline;
+    }
+
+    br.mobile {
+      display: none;
+    }
+
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__item {
+    background-color: var(--color-grey);
+    padding: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.4rem;
+    border-radius: 18px;
+    height: 33.2rem;
+    width: 45rem;
+  }
+
+  &__icon {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  &__subtitle {
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  &__bg-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    line-height: 90%;
+    font-size: 21.3rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    white-space: nowrap;
+    top: 9rem;
+    letter-spacing: 2%;
+
+  }
+
+
+  @include breakpoints.respond-to("mobile") {
+
+    &__title {
+      font-size: 3.6rem;
+      padding-bottom: 1.24rem;
+      text-align: center;
+    }
+
+    &__description {
+      font-size: 1.6rem;
+      padding-bottom: 2.4rem;
+
+      br.desktop {
+        display: none;
+      }
+
+      br.mobile {
+        display: inline;
+      }
+
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0 1.5rem;
+    }
+
+    &__item {
+      padding: 2.1rem;
+      gap: 1.8rem;
+      border-radius: 9px;
+      height: 19.6rem;
+      width: 100%;
+    }
+
+    &__subtitle {
+      font-size: 1.6rem;
+    }
+
+    &__text {
+      font-size: 1.2rem;
+    }
+
+    &__bg-text {
+      top: -2rem;
+      font-size: 4.8rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+header.header
+  a.header__logo(href="#")
+    img(src='images/icons/logo/logo.svg' alt='Логотип')
+  .header__container
+    nav.header__nav(aria-label="Главное меню")
+      ul.header__list
+        li.header__item
+          a.header__link(href="#") Главная
+        li.header__item
+          a.header__link(href="#") Преимущества
+    button.header__btn(type="button" data-modal="open") Получить доступ
+  button.header__burger(type="button" aria-label="Открыть меню")
+    img.burger_icon(src="images/icons/burger.svg" alt="" aria-hidden="true")

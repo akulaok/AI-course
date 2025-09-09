@@ -7,6 +7,8 @@ import autoprefixer from "gulp-autoprefixer";
 import cleanCSS from "gulp-clean-css";
 import uglify from "gulp-uglify";
 import browserSyncModule from "browser-sync";
+import data from "gulp-data";
+import fs from "fs";
 
 const sass = gulpSass(dartSass);
 const browserSync = browserSyncModule.create();
@@ -25,10 +27,14 @@ export function cleanDist() {
 
 export function html() {
   return src(paths.pug.src)
+    .pipe(
+      data(() => ({ benefits: JSON.parse(fs.readFileSync("src/data/benefits.json")) }))
+    )
     .pipe(pug({ pretty: true }))
     .pipe(dest(paths.pug.dest))
     .pipe(browserSync.stream());
 }
+
 
 export function styles() {
   return src(paths.styles.src)
